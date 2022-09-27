@@ -1,6 +1,6 @@
 # Random Story generator
 
-import random as radom
+# import random as radom
 
-while(True):
+while (True):
     print("🦆", end="", sep="-")
