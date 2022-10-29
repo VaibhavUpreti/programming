@@ -1,4 +1,4 @@
-
+% Tower of Hanoi Problem
 move(1,X,Y,_):-
 	write('move top disk from '),
 	write(X),
