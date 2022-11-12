@@ -1,14 +1,16 @@
 #
 
-import random 
+import random as rd
 
-#b = int(input("Enter end number: "))
-#c = int(input("Starting from end number: "))
-
-d= [random.randrange(1,11)]
-print(d)
-
-randlist = [x for x in random.randrange]
-#list1 = [i**2 for i in range(1,b+1) if i>c]
-
-print(randlist)
+x = int(input("Enter no. of inputs: "))
+l = []
+# r = rd.randint(0,100)
+for i in range(0, x):
+    r = rd.randint(0, 100)
+    if r in range(1, 6):
+        l.append(r)
+    elif r in range(6, 31):
+        l.append(r**2)
+    else:
+        continue
+print(l)
