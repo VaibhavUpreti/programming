@@ -7,4 +7,3 @@ fib(N, F) :-
         fib(N1, F1),
         fib(N2, F2),
         F is F1+F2.
-
