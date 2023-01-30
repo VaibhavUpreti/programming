@@ -7,11 +7,6 @@ void push();
 void pop();
 void show();
 
-#define SIZE 4 
-
-int top = -1;
-// int arr[SIZE];
-
 struct node{  
 	int val;  
 	struct node *next;  
@@ -49,23 +44,23 @@ int main(){
 
 void push(){
     int val;
-    struct node *ptr = (struct node*)malloc(sizeof(struct node));   
-    if(ptr == NULL){
+	struct node *ptr = (struct node*)malloc(sizeof(struct node));   
 
-//	if (top == SIZE -1) {
+	if(ptr == NULL){
 		printf("\n Overflow!");
 	}
+
 	else{
 		printf("\nEnter the element to be added:");
 		scanf("%d", &val);
-	//	top = top + 1;
-	//	arr[top] = x;
+		
 		if(head==NULL)  {         
             ptr->val = val;  
             ptr -> next = NULL;  
             head=ptr;  
         }   
-        else{  
+        
+		else{  
             ptr->val = val;  
             ptr->next = head;  
             head=ptr;     
@@ -75,21 +70,19 @@ void push(){
 
 
 void pop(){
-
 	int item;  
     struct node *ptr;  
-    if (head == NULL){
-	//if (top == -1){
+    
+	if (head == NULL){
 		printf("\n Underflow");
 	}
+	
 	else{
 		item = head->val;  
         ptr = head;  
         head = head->next;  
         free(ptr);
 		printf("Item popped");
-	//	printf("\n Popped element: %d ", arr[top]);
-	//	top = top -1;
 	}
 }
 
@@ -99,18 +92,15 @@ void show(){
     struct node *ptr;  
     ptr=head; 
 
-    if(ptr == NULL){
-//	if (top == -1){
+    if(ptr == NULL) {
         printf("\nUnderflow!!");
-    }
-    
-	else{
+    } 
+	else {
         printf("\nElements present in the stack: \n");
+	
 		while(ptr!=NULL){
 		  printf("%d\n",ptr->val);  
 		  ptr = ptr->next;  
         }
-       // for (int i = top; i >= 0; --i)
-         //   printf("%d\n", arr[i]);
     }
 }
