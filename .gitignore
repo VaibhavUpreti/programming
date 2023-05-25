@@ -1,5 +1,9 @@
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+
+
+.DS_Store
+*.DS_Store
 .Python
 [Bb]in
 [Ii]nclude
@@ -10,6 +14,3 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
-
-.DS_Store
-*.DS_Store
